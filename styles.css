@@ -143,30 +143,6 @@ button {
     box-shadow: 0 4px 12px var(--shadow);
 }
 
-.footer {
-    background: var(--background);
-    padding: 20px;
-    text-align: center;
-    border-top: 1px solid #E0E0E0;
-}
-
-.footer p {
-    color: var(--text-light);
-    font-size: 14px;
-}
-
-.footer a {
-    color: var(--tertiary);
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease;
-}
-
-.footer a:hover {
-    color: var(--secondary);
-    text-decoration: underline;
-}
-
 /* Responsive Design */
 @media (max-width: 600px) {
     body {
