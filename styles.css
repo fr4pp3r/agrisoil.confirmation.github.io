@@ -108,24 +108,6 @@ h1 {
     margin-bottom: 24px;
 }
 
-.details {
-    background: var(--background);
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 30px;
-}
-
-.details p {
-    color: var(--text-light);
-    font-size: 14px;
-    line-height: 1.6;
-    margin-bottom: 8px;
-}
-
-.details p:last-child {
-    margin-bottom: 0;
-}
-
 button {
     padding: 14px 28px;
     border: none;
