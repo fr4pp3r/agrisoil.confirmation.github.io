@@ -1,0 +1,216 @@
+/* AgriSoil Color Scheme */
+:root {
+    --primary: #D5AC4E;      /* Gold/Yellow */
+    --secondary: #8B6220;    /* Brown */
+    --tertiary: #2CD34B;     /* Green */
+    --background: #F5F5F5;
+    --text-dark: #333333;
+    --text-light: #666666;
+    --white: #FFFFFF;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(135deg, var(--tertiary) 0%, var(--primary) 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+}
+
+.confirmation-card {
+    background: var(--white);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px var(--shadow);
+    overflow: hidden;
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.logo-placeholder {
+    background: linear-gradient(to bottom, var(--primary), var(--background));
+    padding: 30px 20px 20px;
+    text-align: center;
+    border-bottom: 3px solid var(--tertiary);
+}
+
+.logo-icon {
+    display: inline-block;
+    animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.confirmation-content {
+    padding: 40px 30px;
+    text-align: center;
+}
+
+.success-icon {
+    margin-bottom: 20px;
+    animation: scaleIn 0.6s ease-out;
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.success-icon svg {
+    filter: drop-shadow(0 2px 4px var(--shadow));
+}
+
+h1 {
+    color: var(--secondary);
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.confirmation-message {
+    color: var(--text-dark);
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 24px;
+}
+
+.details {
+    background: var(--background);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.details p {
+    color: var(--text-light);
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.details p:last-child {
+    margin-bottom: 0;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+button {
+    padding: 14px 28px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: var(--secondary);
+}
+
+.btn-primary:hover {
+    background: var(--secondary);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--shadow);
+}
+
+.btn-secondary {
+    background: var(--white);
+    color: var(--tertiary);
+    border: 2px solid var(--tertiary);
+}
+
+.btn-secondary:hover {
+    background: var(--tertiary);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--shadow);
+}
+
+.footer {
+    background: var(--background);
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #E0E0E0;
+}
+
+.footer p {
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+.footer a {
+    color: var(--tertiary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: var(--secondary);
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    
+    .confirmation-content {
+        padding: 30px 20px;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+    
+    .confirmation-message {
+        font-size: 16px;
+    }
+    
+    button {
+        padding: 12px 24px;
+        font-size: 15px;
+    }
+}
